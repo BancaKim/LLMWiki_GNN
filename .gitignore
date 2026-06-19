@@ -1,0 +1,12 @@
+# Obsidian — 기기별 캐시(동기화 충돌 방지: 커밋하지 않음)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/**/data.json
+.trash/
+
+# macOS / iOS / Windows
+.DS_Store
+.AppleDouble
+Thumbs.db
+*.icloud
