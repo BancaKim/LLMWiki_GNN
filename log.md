@@ -9,6 +9,17 @@ timestamp: 2026-06-19T00:00:00Z
 
 OKF 예약 파일입니다. 번들의 변경 이력을 시간 순으로 기록합니다.
 
+## 2026-06-22 — DeepWalk concept 강화 ("실제로 학습하는 것")
+
+- [`papers/foundations/deepwalk.md`](papers/foundations/deepwalk.md) 에 **"DeepWalk가 실제로 학습하는
+  것"** 섹션 추가: 흔한 오해 vs 실제 표, 메커니즘 4단계(워크 생성·γ 반복·윈도우 슬라이딩·임베딩 학습),
+  SGNS 손실 함수, 작동 원리, 비유.
+  - 핵심 정정: 랜덤워크의 학습 신호는 *(시작, 종착)* 이 아니라 **워크 시퀀스상 ±window 동시 등장
+    (co-occurrence)** 쌍이다.
+  - frontmatter 태그에 `sgns`, `co-occurrence`, `negative-sampling` 추가, timestamp 갱신.
+  - [node2vec](papers/foundations/node2vec.md)·[metapath2vec](papers/heterogeneous/metapath2vec.md) 로의
+    동시 등장 관점 연결 추가.
+
 ## 2026-06-19 — 초기 번들 생성 (v0.1)
 
 - OKF v0.1 사양에 따라 **Graph Representation Learning (GNN) LLM Wiki** 번들 초기 구성.
