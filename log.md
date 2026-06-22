@@ -9,6 +9,27 @@ timestamp: 2026-06-19T00:00:00Z
 
 OKF 예약 파일입니다. 번들의 변경 이력을 시간 순으로 기록합니다.
 
+## 2026-06-22 — 전 논문 concept 심화 (12편)
+
+- DeepWalk와 동일한 **심화 템플릿** 을 나머지 **논문 12편 전체** 에 적용:
+  각 문서에 **"핵심 메커니즘 — <X>가 실제로 하는 것"** 섹션 추가
+  (① 한 줄 요약 ② 흔한 오해 vs 실제 표 ③ 단계별 메커니즘 ④ 수식/손실(LaTeX) ⑤ 왜 작동하나 ⑥ 한 줄 비유),
+  필요한 경우 **한계·후속** 절 보강 + frontmatter 태그 확장.
+- 대상:
+  - 기초: [node2vec](papers/foundations/node2vec.md)(2차 편향워크 α_pq·BFS↔DFS),
+    [GCN](papers/foundations/gcn.md)(스펙트럼 1차근사·저역통과·오버스무딩),
+    [GraphSAGE](papers/foundations/graphsage.md)(aggregator 학습·SGNS 손실·미니배치),
+    [GAT](papers/foundations/gat.md)(masked attention·멀티헤드 수식).
+  - 이종: [metapath2vec](papers/heterogeneous/metapath2vec.md)(타입별 소프트맥스 ++),
+    [HGT](papers/heterogeneous/hgt.md)(메타관계 상호 어텐션·RTE·HGSampling).
+  - KG: [TransE](papers/knowledge-graph/transe.md)(마진 랭킹·대칭/N:N 한계 증명),
+    [RotatE](papers/knowledge-graph/rotate.md)(복소 회전·패턴 표현·자기적대적 샘플링),
+    [R-GCN](papers/knowledge-graph/rgcn.md)(관계별 W_r·베이시스 분해·DistMult 디코더),
+    [CompGCN](papers/knowledge-graph/compgcn.md)(노드+관계 공동 임베딩·방향별 3가중치·합성 연산).
+  - 하이퍼그래프: [HGNN](papers/hypergraph/hgnn.md)(인시던스 행렬·2단계 집계 수식),
+    [StarE](papers/hypergraph/stare.md)(한정자 집계·statement 보존·트랜스포머 디코더).
+- 정확성 원칙 유지: 구체 수치는 정성 기술 또는 `(미확인)`, 수식은 표준 정의 기준.
+
 ## 2026-06-22 — DeepWalk concept 강화 ("실제로 학습하는 것")
 
 - [`papers/foundations/deepwalk.md`](papers/foundations/deepwalk.md) 에 **"DeepWalk가 실제로 학습하는
