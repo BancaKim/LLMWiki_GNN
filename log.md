@@ -9,6 +9,13 @@ timestamp: 2026-06-19T00:00:00Z
 
 OKF 예약 파일입니다. 번들의 변경 이력을 시간 순으로 기록합니다.
 
+## 2026-06-22 — node2vec: BFS/DFS ↔ 유사성 매핑 주의 노트 추가
+
+- [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 에 **"Figure 1 함정"** 주의 박스 추가:
+  논문 Figure 1의 예시 노드 s1(동질성)·s6(구조적 동등성)은 **두 개념의 정의 예시일 뿐**, BFS/DFS 매핑이
+  아님을 명확화. 실제 매핑은 **BFS=구조적 동등성(미시적), DFS=동질성(거시적)** 이며 본문·Figure 3
+  (homophily `q=0.5`, structural equivalence `q=2`)으로 근거 제시. 원문 인용·출처 링크 포함.
+
 ## 2026-06-22 — 전 논문 concept 심화 (12편)
 
 - DeepWalk와 동일한 **심화 템플릿** 을 나머지 **논문 12편 전체** 에 적용:

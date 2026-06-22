@@ -52,6 +52,20 @@ timestamp: 2026-06-22T00:00:00Z
 | DFS가 잡는 것 | 구조적 동등성 | **동질성(커뮤니티)** |
 | DeepWalk와 관계 | 전혀 다른 방법 | **p=q=1 이면 node2vec = DeepWalk** (특수 케이스) |
 
+> ⚠️ **헷갈리는 지점 — 논문 Figure 1의 "함정"**
+> 논문 본문은 두 유사성을 *정의* 하며 예시 노드를 든다: **s1**(=u 와 같은 커뮤니티 → **동질성**),
+> **s6**(=u 와 같은 허브 역할 → **구조적 동등성**). 그런데 Figure 1에서 **s1은 BFS 이웃**, **s6은 DFS로
+> 도달** 하는 노드라, *"BFS=동질성, DFS=구조적 동등성"* 처럼 정반대로 읽히기 쉽다.
+> 하지만 **s1·s6은 두 개념의 "정의" 예시일 뿐**, BFS/DFS 매핑이 아니다. 매핑의 근거는 *"그림에서 누구에게
+> 닿느냐"* 가 아니라 *"그 전략이 전체 노드에 만드는 임베딩 구조"* 이며, 논문은 이를 명시한다:
+> - *"neighborhoods sampled by **BFS** lead to embeddings that correspond closely to **structural
+>   equivalence**"* (미시적 국소 샘플링 → 역할 지문).
+> - *"**DFS** ... important in discovering **homophilous communities**"* (거시적 원거리 탐색 → 커뮤니티).
+>
+> 실험(**Figure 3**, Les Misérables)도 일치: **동질성** = `p=1, q=0.5`(DFS 성향), **구조적 동등성** =
+> `p=1, q=2`(BFS 성향). → 결론은 위 표대로 **BFS=구조적 동등성 · DFS=동질성**.
+> ([Stanford PDF](https://cs.stanford.edu/~jure/pubs/node2vec-kdd16.pdf) · [arXiv:1607.00653](https://arxiv.org/abs/1607.00653))
+
 ### 단계별 메커니즘
 
 직전에 `t → v` 로 이동해 지금 `v` 에 있다고 하자. 다음 노드 `x` 로 가는 **비정규화 전이확률** 은
