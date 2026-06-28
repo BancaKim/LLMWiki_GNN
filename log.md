@@ -9,6 +9,15 @@ timestamp: 2026-06-19T00:00:00Z
 
 OKF 예약 파일입니다. 번들의 변경 이력을 시간 순으로 기록합니다.
 
+## 2026-06-22 — node2vec concept 재정돈 (점진 추가분 통합)
+
+- 점진적으로 붙은 ⚠️ 콜아웃 3개(2차 차수·α 정규화·Figure 1 함정)와 중복("p=q=1=DeepWalk" 등)을 정리해
+  [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 를 하나의 일관된 흐름으로 재구성:
+  - 핵심 메커니즘을 ① 워크 생성(2차+정규화 통합) → ② BFS/DFS↔유사성(+Figure 1 함정) → ③ 엣지 임베딩 →
+    한 줄 비유 순으로 정리.
+  - "흔한 오해 vs 실제" 표에 2차 의미·α 점수 행 추가로 흩어진 주의점을 한곳에 모음.
+  - 내용 손실 없이 가독성·중복만 개선.
+
 ## 2026-06-22 — node2vec/PPI: 전이적 학습·평가 설명 보강
 
 - [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 에 **"무엇을 학습하고 어떻게 평가하나
