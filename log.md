@@ -9,6 +9,12 @@ timestamp: 2026-06-19T00:00:00Z
 
 OKF 예약 파일입니다. 번들의 변경 이력을 시간 순으로 기록합니다.
 
+## 2026-06-22 — node2vec: "2차 = 마르코프 차수 ≠ 워크 길이" 주의 노트 추가
+
+- [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 단계별 메커니즘에 주의 박스 추가:
+  "2nd-order"는 **다음 노드 선택 시 직전 노드까지 본다**(마르코프 차수)는 뜻이며 **워크 길이가 2가 아님**.
+  워크 길이 $l$ · 마르코프 차수 2 · SkipGram 윈도우 $k$ 가 서로 별개임을 명확화.
+
 ## 2026-06-22 — node2vec: BFS/DFS ↔ 유사성 매핑 주의 노트 추가
 
 - [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 에 **"Figure 1 함정"** 주의 박스 추가:
