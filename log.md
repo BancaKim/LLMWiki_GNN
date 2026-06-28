@@ -9,6 +9,14 @@ timestamp: 2026-06-19T00:00:00Z
 
 OKF 예약 파일입니다. 번들의 변경 이력을 시간 순으로 기록합니다.
 
+## 2026-06-22 — node2vec/PPI: 전이적 학습·평가 설명 보강
+
+- [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 에 **"무엇을 학습하고 어떻게 평가하나
+  (전이적)"** 섹션 추가: 학습 결과물은 노드별 룩업표 $Z\in\mathbb{R}^{N\times d}$ → 그 그래프 전용,
+  평가는 **같은 그래프에서 라벨만 분할**(BlogCatalog/PPI/Wikipedia = 독립 단일-그래프 실험 3개).
+- [`datasets/reddit-ppi.md`](datasets/reddit-ppi.md) 에 주의 노트 추가: 같은 "PPI"라도
+  **GraphSAGE/GAT=귀납(다중 그래프)** vs **node2vec=전이(단일 그래프, 라벨 분할)** 로 사용 방식이 다름.
+
 ## 2026-06-22 — node2vec: α_pq 정규화(확률 아님) 주의 노트 추가
 
 - [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 에 주의 박스 추가:

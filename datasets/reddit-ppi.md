@@ -30,6 +30,12 @@ timestamp: 2026-06-19T00:00:00Z
 - [GraphSAGE](../papers/foundations/graphsage.md), [GAT](../papers/foundations/gat.md)(PPI),
   [node2vec](../papers/foundations/node2vec.md)(PPI) 등이 사용.
 
+> ⚠️ **같은 "PPI"라도 사용 방식이 다름**:
+> - **귀납적(다중 그래프)** — [GraphSAGE](../papers/foundations/graphsage.md)·[GAT](../papers/foundations/gat.md):
+>   조직별 그래프 여러 개로 구성, 일부로 학습하고 **새 그래프** 로 평가(위 설명).
+> - **전이적(단일 그래프)** — [node2vec](../papers/foundations/node2vec.md): 사람 단백질망을 **그래프 1개**
+>   로 보고, 같은 그래프에서 **라벨만 분할** 해 다중 라벨 분류(전이적). 위 "다중 그래프" 설명은 node2vec엔 해당 안 됨.
+
 ## 이 데이터셋을 쓰는 논문
 - [GraphSAGE](../papers/foundations/graphsage.md), [GAT](../papers/foundations/gat.md), [node2vec](../papers/foundations/node2vec.md)
 
