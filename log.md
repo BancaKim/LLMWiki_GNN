@@ -9,6 +9,12 @@ timestamp: 2026-06-19T00:00:00Z
 
 OKF 예약 파일입니다. 번들의 변경 이력을 시간 순으로 기록합니다.
 
+## 2026-06-22 — node2vec: α_pq 정규화(확률 아님) 주의 노트 추가
+
+- [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 에 주의 박스 추가:
+  $\alpha_{pq}$ 는 **비정규화 가중치(점수)** 이며 이웃 합 $Z$ 로 나눠 확률이 됨($1/p+1+1/q$ 가 1을 넘어도 무방).
+  정규화 식 + 숫자 예시($p{=}1,q{=}2$ → 0.4/0.4/0.2), $d{=}1$ 의 "1"은 기준값(비율만 의미)임을 명확화.
+
 ## 2026-06-22 — node2vec: "2차 = 마르코프 차수 ≠ 워크 길이" 주의 노트 추가
 
 - [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 단계별 메커니즘에 주의 박스 추가:
