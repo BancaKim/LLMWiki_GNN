@@ -9,6 +9,29 @@ timestamp: 2026-06-19T00:00:00Z
 
 OKF 예약 파일입니다. 번들의 변경 이력을 시간 순으로 기록합니다.
 
+## 2026-06-22 — node2vec: 커뮤니티 vs 구조적 역할 레미제라블 예시 추가
+
+- [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) BFS/DFS 절에 **레미제라블 예시** 콜아웃 추가:
+  커뮤니티(동질성)=함께 자주 등장하는 무리, 구조적 역할(구조적 동등성)=다른 무리라도 같은 역할(허브/다리/잎).
+  "동질성=연결의 밀집 / 구조적 동등성=연결의 모양" 으로 직관 정리.
+
+## 2026-06-22 — node2vec concept 재정돈 (점진 추가분 통합)
+
+- 점진적으로 붙은 ⚠️ 콜아웃 3개(2차 차수·α 정규화·Figure 1 함정)와 중복("p=q=1=DeepWalk" 등)을 정리해
+  [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 를 하나의 일관된 흐름으로 재구성:
+  - 핵심 메커니즘을 ① 워크 생성(2차+정규화 통합) → ② BFS/DFS↔유사성(+Figure 1 함정) → ③ 엣지 임베딩 →
+    한 줄 비유 순으로 정리.
+  - "흔한 오해 vs 실제" 표에 2차 의미·α 점수 행 추가로 흩어진 주의점을 한곳에 모음.
+  - 내용 손실 없이 가독성·중복만 개선.
+
+## 2026-06-22 — node2vec/PPI: 전이적 학습·평가 설명 보강
+
+- [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 에 **"무엇을 학습하고 어떻게 평가하나
+  (전이적)"** 섹션 추가: 학습 결과물은 노드별 룩업표 $Z\in\mathbb{R}^{N\times d}$ → 그 그래프 전용,
+  평가는 **같은 그래프에서 라벨만 분할**(BlogCatalog/PPI/Wikipedia = 독립 단일-그래프 실험 3개).
+- [`datasets/reddit-ppi.md`](datasets/reddit-ppi.md) 에 주의 노트 추가: 같은 "PPI"라도
+  **GraphSAGE/GAT=귀납(다중 그래프)** vs **node2vec=전이(단일 그래프, 라벨 분할)** 로 사용 방식이 다름.
+
 ## 2026-06-22 — node2vec: α_pq 정규화(확률 아님) 주의 노트 추가
 
 - [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) 에 주의 박스 추가:
