@@ -9,6 +9,14 @@ timestamp: 2026-06-19T00:00:00Z
 
 OKF 예약 파일입니다. 번들의 변경 이력을 시간 순으로 기록합니다.
 
+## 2026-06-30 — GCN·GraphSAGE 초심자용 설명 추가
+
+- [`papers/foundations/gcn.md`](papers/foundations/gcn.md): **"예제로 따라가기 (A·Ã·D·정규화)"** 워크스루
+  추가 — 3-노드 그래프로 A→Ã(self-loop)→D̃→$\hat A=\tilde D^{-1/2}\tilde A\tilde D^{-1/2}$ 계산과
+  $\hat A H$ 스무딩을 숫자로 시연, $\hat A H W$ + σ 의미 정리.
+- [`papers/foundations/graphsage.md`](papers/foundations/graphsage.md): **"이웃 샘플링이란?(초심자용)"**
+  박스 추가 — 이웃 폭발 → 고정 예산 샘플링($S=[25,10]$) → 미니배치/귀납·확장, 트레이드오프, HGSampling 연결.
+
 ## 2026-06-22 — node2vec: 커뮤니티 vs 구조적 역할 레미제라블 예시 추가
 
 - [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) BFS/DFS 절에 **레미제라블 예시** 콜아웃 추가:
