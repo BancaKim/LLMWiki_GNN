@@ -14,10 +14,11 @@ timestamp: 2026-06-19T00:00:00Z
 
 ```
 Graph Representation Learning
-├── 📐 기초                   랜덤워크 임베딩 + 메시지 패싱 GNN 백본
+├── 📐 기초                   랜덤워크 임베딩 + 메시지 패싱 GNN 백본 + 표현력(GIN)
 ├── 🔀 이종 그래프            여러 타입 노드·엣지 (type-aware)
 ├── 🔗 지식 그래프            (h, r, t) 삼중항 + 다관계
-└── 🕸️ 하이퍼그래프·하이퍼관계  2-노드 엣지를 넘어선 고차 관계
+├── 🕸️ 하이퍼그래프·하이퍼관계  2-노드 엣지를 넘어선 고차 관계
+└── 🌀 그래프 트랜스포머        메시지 패싱을 넘는 (준)전역 어텐션
 ```
 → [papers/index.md](../papers/index.md) 에서 각 카테고리로 이동.
 
@@ -52,6 +53,8 @@ Graph Representation Learning
 | 어텐션 | 이웃·타입별 가중 학습 | [GAT](../papers/foundations/gat.md), [HGT](../papers/heterogeneous/hgt.md) |
 | 관계 기하 모델링 | 이동/회전 등 거리 스코어 | [TransE](../papers/knowledge-graph/transe.md), [RotatE](../papers/knowledge-graph/rotate.md) |
 | 합성(composition) | 노드·관계 결합 메시지 | [CompGCN](../papers/knowledge-graph/compgcn.md), [StarE](../papers/hypergraph/stare.md) |
+| 단사 집계(표현력) | sum+MLP로 1-WL 도달 | [GIN](../papers/foundations/gin.md) |
+| (준)전역 어텐션 | 구조 인코딩·국소+전역 하이브리드 | [Graphormer](../papers/graph-transformer/graphormer.md), [GraphGPS](../papers/graph-transformer/graphgps.md) |
 
 ## 보조 축 4 — 다운스트림 과제
 
@@ -66,6 +69,7 @@ Graph Representation Learning
 | [GCN](../papers/foundations/gcn.md) | 기초 | GNN·전이 | 동질 | 스펙트럼 합성곱 |
 | [GraphSAGE](../papers/foundations/graphsage.md) | 기초 | GNN·귀납 | 동질 | 샘플+집계 |
 | [GAT](../papers/foundations/gat.md) | 기초 | GNN·귀납 | 동질 | 어텐션 |
+| [GIN](../papers/foundations/gin.md) | 기초 | GNN | 동질 | 단사 집계(sum+MLP) |
 | [metapath2vec](../papers/heterogeneous/metapath2vec.md) | 이종 | 얕은 | 이종 | 메타패스 워크 |
 | [HGT](../papers/heterogeneous/hgt.md) | 이종 | GNN·귀납 | 이종·시간 | 메타관계 어텐션 |
 | [TransE](../papers/knowledge-graph/transe.md) | KG | 얕은 | 다관계 | 평행이동 |
@@ -74,6 +78,8 @@ Graph Representation Learning
 | [CompGCN](../papers/knowledge-graph/compgcn.md) | KG | GNN | 다관계 | 합성 메시지 |
 | [HGNN](../papers/hypergraph/hgnn.md) | 하이퍼그래프 | GNN | 하이퍼그래프 | 하이퍼엣지 합성곱 |
 | [StarE](../papers/hypergraph/stare.md) | 하이퍼관계 | GNN | 하이퍼관계 | 한정자 합성 메시지 |
+| [Graphormer](../papers/graph-transformer/graphormer.md) | 그래프 트랜스포머 | GNN·귀납 | 동질 | 구조 인코딩 어텐션 |
+| [GraphGPS](../papers/graph-transformer/graphgps.md) | 그래프 트랜스포머 | GNN·귀납 | 동질 | 국소+전역 하이브리드 |
 
 ---
 [← 이전: 개요](overview.md) · [다음: 데이터셋 개요 →](datasets-overview.md)

@@ -26,4 +26,4 @@ timestamp: 2026-06-19T00:00:00Z
 >   [CompGCN](../knowledge-graph/compgcn.md)을 확장하며 KG 흐름과 이어집니다.
 
 ---
-[← 이전: 지식 그래프](../knowledge-graph/index.md) · [논문 모음 →](../index.md)
+[← 이전: 지식 그래프](../knowledge-graph/index.md) · [다음: 그래프 트랜스포머 →](../graph-transformer/index.md)

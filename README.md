@@ -31,11 +31,12 @@ OKF는 LLM-wiki 패턴을 이식 가능한 포맷으로 표준화한 개방 사�
 ├── log.md            # 변경 이력
 ├── concepts/         # 배경 개념 (개요·분류·용어·데이터셋·동향)
 ├── datasets/         # 벤치마크 데이터셋 concept
-└── papers/           # 13편 논문 concept (4개 주제 디렉터리)
-    ├── foundations/      # 랜덤워크 + GNN 백본 (DeepWalk·node2vec·GCN·GraphSAGE·GAT)
+└── papers/           # 16편 논문 concept (5개 주제 디렉터리)
+    ├── foundations/      # 랜덤워크 + GNN 백본 + 표현력 (DeepWalk·node2vec·GCN·GraphSAGE·GAT·GIN)
     ├── heterogeneous/    # 이종 그래프 (metapath2vec·HGT)
     ├── knowledge-graph/  # 지식그래프 (TransE·RotatE·R-GCN·CompGCN)
-    └── hypergraph/       # 하이퍼그래프·하이퍼관계 (HGNN·StarE)
+    ├── hypergraph/       # 하이퍼그래프·하이퍼관계 (HGNN·StarE)
+    └── graph-transformer/ # 그래프 트랜스포머 (Graphormer·GraphGPS)
 ```
 
 ## 각 concept 문서의 형식

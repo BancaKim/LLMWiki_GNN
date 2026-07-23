@@ -51,7 +51,9 @@ timestamp: 2026-06-19T00:00:00Z
 | **이종 그래프 (Heterogeneous)** | 여러 타입의 노드·엣지를 가진 그래프 |
 | **메타패스 (Meta-path)** | 노드 타입 시퀀스 스키마 (예: APA) ([metapath2vec](../papers/heterogeneous/metapath2vec.md)) |
 | **메타관계 (Meta-relation)** | ⟨소스타입, 엣지타입, 타깃타입⟩ 삼중쌍 ([HGT](../papers/heterogeneous/hgt.md)) |
-| **Graph Transformer** | 트랜스포머 어텐션을 그래프에 적용 (HGT) |
+| **Graph Transformer** | 트랜스포머 (준)전역 어텐션을 그래프에 적용 ([Graphormer](../papers/graph-transformer/graphormer.md)·[GraphGPS](../papers/graph-transformer/graphgps.md)·HGT) |
+| **표현력 / 1-WL** | GNN이 비동형 그래프를 구분하는 능력. 메시지 패싱의 상한 = 1-Weisfeiler-Lehman ([GIN](../papers/foundations/gin.md)) |
+| **위치·구조 인코딩 (PE/SE)** | 라플라시안 고유벡터·랜덤워크 등으로 노드에 위상 신호 주입(그래프 트랜스포머의 핵심) |
 | **지식그래프 (KG)** | (head, relation, tail) 삼중항의 집합 |
 | **다관계 (Multi-relational)** | 여러 관계 유형을 가진 그래프 |
 | **KG 임베딩 (KG Embedding)** | 엔티티·관계를 벡터로 (TransE/RotatE) |

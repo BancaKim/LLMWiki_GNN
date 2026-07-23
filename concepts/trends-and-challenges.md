@@ -32,7 +32,11 @@ timestamp: 2026-06-19T00:00:00Z
 [StarE](../papers/hypergraph/stare.md)(한정자 포함 KG)로 확장.
 
 ### 4. (이후) Graph Transformer·확장성·자기지도·파운데이션
-- **Graph Transformer**: [HGT](../papers/heterogeneous/hgt.md) 등 어텐션 기반이 발전(Graphormer 등).
+- **Graph Transformer**: 메시지 패싱의 장거리·오버스무딩 한계를 (준)전역 어텐션으로 극복 →
+  [Graphormer](../papers/graph-transformer/graphormer.md)(구조 인코딩) →
+  [GraphGPS](../papers/graph-transformer/graphgps.md)(국소+전역 하이브리드·선형 확장). 이종판은
+  [HGT](../papers/heterogeneous/hgt.md).
+- **표현력 이론**: 메시지 패싱 = 1-WL 상한([GIN](../papers/foundations/gin.md)) → 이를 넘으려는 고차·부분구조 GNN.
 - **확장성**: 이웃 샘플링([GraphSAGE](../papers/foundations/graphsage.md))·그래프 샘플링·서브그래프 학습.
 - **자기지도(SSL)**: DGI, GRACE 등 대조학습으로 라벨 없이 강한 임베딩.
 - **그래프 파운데이션 모델 / LLM × Graph**: 사전학습·전이, 텍스트-속성 그래프(TAG) 활용.
