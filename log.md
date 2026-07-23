@@ -9,6 +9,30 @@ timestamp: 2026-06-19T00:00:00Z
 
 OKF 예약 파일입니다. 번들의 변경 이력을 시간 순으로 기록합니다.
 
+## 2026-06-30 — 최신 기준 갱신: GIN + 그래프 트랜스포머 3편 추가 (13→16편)
+
+- 주간 스캔 재실행. **이번 주(6월 말) 신규 arXiv 프리프린트는 검증 불가/범위 밖**이라 미추가(런북 원칙).
+  대신 번들이 2020년(StarE)에서 끊겨 있어, **검증 가능한 탑티어 landmark 3편** 으로 현재 수준까지 확장:
+  - [`papers/foundations/gin.md`](papers/foundations/gin.md) — **GIN**(ICLR'19, arXiv:1810.00826):
+    메시지 패싱 표현력 = 1-WL, 단사 집계(sum+MLP), mean/max가 약한 이유.
+  - 신설 카테고리 **🌀 그래프 트랜스포머** ([`papers/graph-transformer/`](papers/graph-transformer/index.md)):
+    - **Graphormer**(NeurIPS'21, arXiv:2106.05234) — 어텐션 bias로 구조 인코딩(centrality·spatial·edge).
+    - **GraphGPS**(NeurIPS'22, arXiv:2205.12454) — 국소 MPNN+전역 어텐션 하이브리드, 선형 O(N+E).
+  - 3편 모두 심화 템플릿(오해 표·수식·직관) 적용, ⭐ 등급(탑티어).
+- 색인·집계 갱신: 루트 [index.md](index.md)(⭐ 12→15, 카테고리 5개), [papers/index.md](papers/index.md),
+  [foundations/index.md](papers/foundations/index.md)(5→6), [CLAUDE.md](CLAUDE.md)(⭐ 목록),
+  [taxonomy](concepts/taxonomy.md)·[trends](concepts/trends-and-challenges.md)·[glossary](concepts/glossary.md)
+  에 그래프 트랜스포머·표현력(1-WL)·PE/SE 반영.
+- 검증: 검색으로 저자·발표처·연도·arXiv ID 대조(실재 확인). 구체 수치는 정성 기술 또는 `(미확인)`.
+
+## 2026-06-30 — GCN·GraphSAGE 초심자용 설명 추가
+
+- [`papers/foundations/gcn.md`](papers/foundations/gcn.md): **"예제로 따라가기 (A·Ã·D·정규화)"** 워크스루
+  추가 — 3-노드 그래프로 A→Ã(self-loop)→D̃→$\hat A=\tilde D^{-1/2}\tilde A\tilde D^{-1/2}$ 계산과
+  $\hat A H$ 스무딩을 숫자로 시연, $\hat A H W$ + σ 의미 정리.
+- [`papers/foundations/graphsage.md`](papers/foundations/graphsage.md): **"이웃 샘플링이란?(초심자용)"**
+  박스 추가 — 이웃 폭발 → 고정 예산 샘플링($S=[25,10]$) → 미니배치/귀납·확장, 트레이드오프, HGSampling 연결.
+
 ## 2026-06-22 — node2vec: 커뮤니티 vs 구조적 역할 레미제라블 예시 추가
 
 - [`papers/foundations/node2vec.md`](papers/foundations/node2vec.md) BFS/DFS 절에 **레미제라블 예시** 콜아웃 추가:
