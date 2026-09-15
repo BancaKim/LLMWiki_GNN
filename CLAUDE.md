@@ -26,10 +26,10 @@
 ### 표기에서 제외(일반)
 - arXiv 프리프린트(정식 게재처 미확인) — 게재 확정 시 위 기준으로 재평가
 
-### 현재 ⭐ 필독 12편 (AI 탑티어)
+### 현재 ⭐ 필독 15편 (AI 탑티어)
 DeepWalk(KDD'14) · node2vec(KDD'16) · GCN(ICLR'17) · GraphSAGE(NeurIPS'17) · GAT(ICLR'18) ·
-metapath2vec(KDD'17) · HGT(WWW'20) · TransE(NeurIPS'13) · RotatE(ICLR'19) · CompGCN(ICLR'20) ·
-HGNN(AAAI'19) · StarE(EMNLP'20).
+GIN(ICLR'19) · metapath2vec(KDD'17) · HGT(WWW'20) · TransE(NeurIPS'13) · RotatE(ICLR'19) ·
+CompGCN(ICLR'20) · HGNN(AAAI'19) · StarE(EMNLP'20) · Graphormer(NeurIPS'21) · GraphGPS(NeurIPS'22).
 
 ### 🏅 보조 표기
 R-GCN(ESWC'18) — 관계형 GNN의 시초로 영향력은 크나 ESWC는 AI-탑티어 랭킹이 아님.
