@@ -1,9 +1,9 @@
 ---
 type: Index
 title: 📐 기초 (Foundations)
-description: 그래프 표현학습의 기반 6편 — 랜덤워크 임베딩(DeepWalk·node2vec), 메시지 패싱 GNN 백본(GCN·GraphSAGE·GAT), 표현력 이론(GIN). 6편 모두 탑티어 학회 필독.
-tags: [foundations, random-walk, gnn-backbone, gcn, graphsage, gat, gin, must-read]
-timestamp: 2026-06-30T00:00:00Z
+description: 그래프 표현학습의 기반 8편 — 랜덤워크 임베딩(DeepWalk·node2vec), 메시지 패싱 GNN 백본(GCN·GraphSAGE·GAT), 표현력 이론(GIN), GCN 단순화·전파(SGC·APPNP). 8편 모두 탑티어 학회 필독.
+tags: [foundations, random-walk, gnn-backbone, gcn, graphsage, gat, gin, sgc, appnp, must-read]
+timestamp: 2026-09-28T00:00:00Z
 ---
 
 # 📐 기초 (Foundations) — 랜덤워크 + GNN 백본
@@ -11,8 +11,8 @@ timestamp: 2026-06-30T00:00:00Z
 [← 논문 모음](../index.md) · [번들 루트](../../index.md)
 
 그래프 표현학습의 **출발점**. 노드를 "단어"처럼 임베딩하는 랜덤워크 계열에서 시작해, 그래프 구조를
-직접 신경망에 넣는 **메시지 패싱 GNN** 백본, 그리고 그 **표현력의 한계(GIN)** 까지 이어집니다.
-**이 카테고리는 6편 모두 ⭐ 필독입니다.**
+직접 신경망에 넣는 **메시지 패싱 GNN** 백본, 그 **표현력의 한계(GIN)**, 그리고 GCN을 **단순화·재해석**
+하는 흐름(SGC·APPNP)까지 이어집니다. **이 카테고리는 8편 모두 ⭐ 필독입니다.**
 
 > **범례**: ⭐ = 탑티어 AI 학회 게재 **필독(MUST-READ)**.
 
@@ -24,6 +24,8 @@ timestamp: 2026-06-30T00:00:00Z
 4. **[GraphSAGE](graphsage.md)** — 샘플+집계로 귀납·확장
 5. **[GAT](gat.md)** — 어텐션으로 이웃 가중 학습
 6. **[GIN](gin.md)** — 메시지 패싱의 표현력 한계(1-WL)와 sum+MLP
+7. **[SGC](sgc.md)** — GCN 비선형 제거 = 고정 저역통과 필터(선형·초고속)
+8. **[APPNP](appnp.md)** — 예측/전파 분리 + personalized PageRank(오버스무딩 완화)
 
 | ⭐ | 논문 | 연도/발표처 | 핵심 아이디어 | concept |
 |:--:|------|------------|--------------|---------|
@@ -33,6 +35,8 @@ timestamp: 2026-06-30T00:00:00Z
 | ⭐ | GraphSAGE | **NeurIPS 2017** | 이웃 샘플링 + 집계(귀납적) | [graphsage.md](graphsage.md) |
 | ⭐ | GAT | **ICLR 2018** | 멀티헤드 셀프 어텐션 | [gat.md](gat.md) |
 | ⭐ | GIN | **ICLR 2019** | 표현력=1-WL, 단사 집계(sum+MLP) | [gin.md](gin.md) |
+| ⭐ | SGC | **ICML 2019** | GCN 선형화 = 고정 저역통과 필터 | [sgc.md](sgc.md) |
+| ⭐ | APPNP | **ICLR 2019** | 예측/전파 분리 + PageRank 전파 | [appnp.md](appnp.md) |
 
 > 관련 데이터셋: [Cora/Citeseer/Pubmed](../../datasets/cora-citeseer-pubmed.md),
 > [Reddit/PPI](../../datasets/reddit-ppi.md), [BlogCatalog](../../datasets/blogcatalog.md)

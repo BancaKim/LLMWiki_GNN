@@ -26,4 +26,4 @@ timestamp: 2026-06-30T00:00:00Z
 > 이종판은 [HGT](../heterogeneous/hgt.md). 관련 데이터셋: [OGB](../../datasets/ogb.md).
 
 ---
-[← 이전: 하이퍼그래프](../hypergraph/index.md) · [논문 모음 →](../index.md)
+[← 이전: 하이퍼그래프](../hypergraph/index.md) · [다음: 자기지도 →](../self-supervised/index.md)

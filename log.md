@@ -9,6 +9,21 @@ timestamp: 2026-06-19T00:00:00Z
 
 OKF 예약 파일입니다. 번들의 변경 이력을 시간 순으로 기록합니다.
 
+## 2026-09-28 — 재스캔 갱신: 5편 추가 (16→21편, 자기지도 카테고리 신설)
+
+- 주간 스캔 재실행(9월 말). **검증 가능한 신규 프리프린트 없음**(런북 원칙 — 미검증/범위 밖 미추가).
+  대신 커버리지 공백을 **검증된 탑티어 landmark 5편** 으로 메움(저자·발표처·연도·arXiv ID 검색 대조):
+  - 기초 += [SGC](papers/foundations/sgc.md)(ICML'19, 1902.07153) · [APPNP](papers/foundations/appnp.md)(ICLR'19, 1810.05997) → 6→8
+  - 이종 += [HAN](papers/heterogeneous/han.md)(WWW'19, 1903.07293) → 2→3
+  - **신설 🧬 자기지도·대조학습** ([self-supervised/](papers/self-supervised/index.md)):
+    [DGI](papers/self-supervised/dgi.md)(ICLR'19, 1809.10341) · [GraphCL](papers/self-supervised/graphcl.md)(NeurIPS'20, 2010.13902)
+  - 5편 모두 심화 템플릿(오해 표·수식·직관), ⭐ 등급(탑티어).
+- 집계 갱신: 루트 [index.md](index.md)(⭐ 15→20, 6개 주제, 21편), [papers/index.md](papers/index.md),
+  [foundations](papers/foundations/index.md)(8)·[heterogeneous](papers/heterogeneous/index.md)(3) index,
+  [README](README.md), [CLAUDE.md](CLAUDE.md)(⭐ 목록), [taxonomy](concepts/taxonomy.md)·
+  [trends](concepts/trends-and-challenges.md)·[glossary](concepts/glossary.md)(자기지도·대조·InfoNCE 등).
+- 검증: 내부 링크 무결성·YAML·frontmatter `type` 통과. 구체 수치는 정성 기술 또는 `(미확인)`.
+
 ## 2026-06-30 — 최신 기준 갱신: GIN + 그래프 트랜스포머 3편 추가 (13→16편)
 
 - 주간 스캔 재실행. **이번 주(6월 말) 신규 arXiv 프리프린트는 검증 불가/범위 밖**이라 미추가(런북 원칙).

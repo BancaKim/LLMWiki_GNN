@@ -38,7 +38,8 @@ timestamp: 2026-06-19T00:00:00Z
   [HGT](../papers/heterogeneous/hgt.md).
 - **표현력 이론**: 메시지 패싱 = 1-WL 상한([GIN](../papers/foundations/gin.md)) → 이를 넘으려는 고차·부분구조 GNN.
 - **확장성**: 이웃 샘플링([GraphSAGE](../papers/foundations/graphsage.md))·그래프 샘플링·서브그래프 학습.
-- **자기지도(SSL)**: DGI, GRACE 등 대조학습으로 라벨 없이 강한 임베딩.
+- **자기지도(SSL)**: 상호정보 최대화([DGI](../papers/self-supervised/dgi.md))·증강 대조
+  ([GraphCL](../papers/self-supervised/graphcl.md))로 라벨 없이 강한 임베딩(이후 BGRL·GRACE 등).
 - **그래프 파운데이션 모델 / LLM × Graph**: 사전학습·전이, 텍스트-속성 그래프(TAG) 활용.
 
 ## 🧩 남은 미해결 과제 (Open Problems)

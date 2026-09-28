@@ -26,7 +26,7 @@ OKF **concept** 문서로 정리합니다. 랜덤워크 임베딩에서 시작�
 ├── log.md                   ← 변경 이력 (OKF 예약 파일)
 ├── concepts/                ← 배경 개념 (개요·분류·용어·동향)
 ├── datasets/                ← 표준 벤치마크 데이터셋 concept
-└── papers/                  ← 논문 concept (5개 주제 디렉터리)
+└── papers/                  ← 논문 concept (6개 주제 디렉터리)
 ```
 
 ## 🧭 탐색 (Progressive Disclosure)
@@ -35,7 +35,7 @@ OKF **concept** 문서로 정리합니다. 랜덤워크 임베딩에서 시작�
 |------|------|----------|
 | 📚 배경 개념 | 그래프 표현학습 개요·분류·용어·동향 | [concepts/index.md](concepts/index.md) |
 | 🧪 데이터셋 | 표준 벤치마크 데이터셋 | [datasets/index.md](datasets/index.md) |
-| 📄 논문 | 16편 논문 (5개 주제) | [papers/index.md](papers/index.md) |
+| 📄 논문 | 21편 논문 (6개 주제) | [papers/index.md](papers/index.md) |
 | 🧰 노트앱으로 보기 | Obsidian으로 iPad·iPhone·Mac 동기화 | [obsidian-setup.md](obsidian-setup.md) |
 | 📊 대시보드 | Dataview 동적 목록(⭐/연도/태그별) | [dashboard.md](dashboard.md) |
 | 🤖 주간 자동 업데이트 | Routine으로 매주 신규 논문 스캔→초안 PR | [automation-weekly-routine.md](automation-weekly-routine.md) |
@@ -47,13 +47,14 @@ OKF **concept** 문서로 정리합니다. 랜덤워크 임베딩에서 시작�
 
 | 주제 | 논문 수 | ⭐ 필독 | 바로가기 |
 |------|:------:|:------:|----------|
-| 📐 기초 (랜덤워크·GNN 백본·표현력) | 6 | 6 | [papers/foundations/index.md](papers/foundations/index.md) |
-| 🔀 이종 그래프 (Heterogeneous) | 2 | 2 | [papers/heterogeneous/index.md](papers/heterogeneous/index.md) |
+| 📐 기초 (랜덤워크·GNN 백본·표현력) | 8 | 8 | [papers/foundations/index.md](papers/foundations/index.md) |
+| 🔀 이종 그래프 (Heterogeneous) | 3 | 3 | [papers/heterogeneous/index.md](papers/heterogeneous/index.md) |
 | 🔗 지식 그래프 (Knowledge Graph) | 4 | 3 | [papers/knowledge-graph/index.md](papers/knowledge-graph/index.md) |
 | 🕸️ 하이퍼그래프·하이퍼관계 | 2 | 2 | [papers/hypergraph/index.md](papers/hypergraph/index.md) |
 | 🌀 그래프 트랜스포머 (Graph Transformer) | 2 | 2 | [papers/graph-transformer/index.md](papers/graph-transformer/index.md) |
+| 🧬 자기지도·대조학습 (Self-Supervised) | 2 | 2 | [papers/self-supervised/index.md](papers/self-supervised/index.md) |
 
-### ⭐ 필독 논문 (탑티어 학회) — 15편
+### ⭐ 필독 논문 (탑티어 학회) — 20편
 
 처음 읽는다면 아래 순서를 권합니다. 전체 목록·범례는 [papers/index.md](papers/index.md).
 
@@ -65,7 +66,10 @@ OKF **concept** 문서로 정리합니다. 랜덤워크 임베딩에서 시작�
 | ⭐ | GraphSAGE | **NeurIPS 2017** | [papers/foundations/graphsage.md](papers/foundations/graphsage.md) |
 | ⭐ | GAT | **ICLR 2018** | [papers/foundations/gat.md](papers/foundations/gat.md) |
 | ⭐ | GIN | **ICLR 2019** | [papers/foundations/gin.md](papers/foundations/gin.md) |
+| ⭐ | SGC | **ICML 2019** | [papers/foundations/sgc.md](papers/foundations/sgc.md) |
+| ⭐ | APPNP | **ICLR 2019** | [papers/foundations/appnp.md](papers/foundations/appnp.md) |
 | ⭐ | metapath2vec | **KDD 2017** | [papers/heterogeneous/metapath2vec.md](papers/heterogeneous/metapath2vec.md) |
+| ⭐ | HAN | **WWW 2019** | [papers/heterogeneous/han.md](papers/heterogeneous/han.md) |
 | ⭐ | HGT | **WWW 2020** | [papers/heterogeneous/hgt.md](papers/heterogeneous/hgt.md) |
 | ⭐ | TransE | **NeurIPS 2013** | [papers/knowledge-graph/transe.md](papers/knowledge-graph/transe.md) |
 | ⭐ | RotatE | **ICLR 2019** | [papers/knowledge-graph/rotate.md](papers/knowledge-graph/rotate.md) |
@@ -74,6 +78,8 @@ OKF **concept** 문서로 정리합니다. 랜덤워크 임베딩에서 시작�
 | ⭐ | StarE | **EMNLP 2020** | [papers/hypergraph/stare.md](papers/hypergraph/stare.md) |
 | ⭐ | Graphormer | **NeurIPS 2021** | [papers/graph-transformer/graphormer.md](papers/graph-transformer/graphormer.md) |
 | ⭐ | GraphGPS | **NeurIPS 2022** | [papers/graph-transformer/graphgps.md](papers/graph-transformer/graphgps.md) |
+| ⭐ | DGI | **ICLR 2019** | [papers/self-supervised/dgi.md](papers/self-supervised/dgi.md) |
+| ⭐ | GraphCL | **NeurIPS 2020** | [papers/self-supervised/graphcl.md](papers/self-supervised/graphcl.md) |
 
 > 🏅 **참고**: [R-GCN](papers/knowledge-graph/rgcn.md)(ESWC 2018) 은 관계형 GNN의 시초로 매우 영향력이 크지만
 > 학회 랭킹상 ⭐(AI-탑티어) 대상은 아니어서 🏅 보조 표기합니다.
@@ -85,14 +91,16 @@ OKF **concept** 문서로 정리합니다. 랜덤워크 임베딩에서 시작�
   ([GCN](papers/foundations/gcn.md) → [GraphSAGE](papers/foundations/graphsage.md) →
   [GAT](papers/foundations/gat.md), 표현력 [GIN](papers/foundations/gin.md)) → ③ 노드/엣지가 **여러 타입**
   인 현실 그래프로 확장(이종·KG·하이퍼그래프) → ④ 메시지 패싱을 넘어 **그래프 트랜스포머**
-  ([Graphormer](papers/graph-transformer/graphormer.md) → [GraphGPS](papers/graph-transformer/graphgps.md)).
+  ([Graphormer](papers/graph-transformer/graphormer.md) → [GraphGPS](papers/graph-transformer/graphgps.md))
+  → ⑤ 라벨 없이 배우는 **자기지도·대조학습**([DGI](papers/self-supervised/dgi.md) →
+  [GraphCL](papers/self-supervised/graphcl.md)).
 - **3대 확장축**: **이질형 타입**(heterogeneous), **다관계·지식그래프**(multi-relational / KG),
   **고차 관계**(hyper-relational / hypergraph). → [분류 체계](concepts/taxonomy.md)
-- **왜 중요한가**: 이 16편은 이후 거의 모든 그래프 응용(추천·사기탐지·분자·NLP·KG 추론)의
+- **왜 중요한가**: 이 21편은 이후 거의 모든 그래프 응용(추천·사기탐지·분자·NLP·KG 추론)의
   **백본·인코더** 가 되었습니다. → [동향·과제](concepts/trends-and-challenges.md)
 
 > ⚠️ **정확성 안내**: 본 위키는 LLM(Claude)이 정리했습니다. 저자·발표처·핵심 기법 등 핵심 사실은
 > 교차 검증했으나 일부 세부 수치는 원문 확인이 필요할 수 있어 *(미확인)* 으로 표기했습니다.
 > 인용 전 각 concept 문서의 `resource` 링크(원문)를 확인하세요.
 
-*최종 갱신: 2026-06-30 · 변경 이력: [log.md](log.md)*
+*최종 갱신: 2026-09-28 · 변경 이력: [log.md](log.md)*

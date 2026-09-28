@@ -18,7 +18,8 @@ Graph Representation Learning
 ├── 🔀 이종 그래프            여러 타입 노드·엣지 (type-aware)
 ├── 🔗 지식 그래프            (h, r, t) 삼중항 + 다관계
 ├── 🕸️ 하이퍼그래프·하이퍼관계  2-노드 엣지를 넘어선 고차 관계
-└── 🌀 그래프 트랜스포머        메시지 패싱을 넘는 (준)전역 어텐션
+├── 🌀 그래프 트랜스포머        메시지 패싱을 넘는 (준)전역 어텐션
+└── 🧬 자기지도·대조학습        라벨 없이 학습(상호정보·증강 대조)
 ```
 → [papers/index.md](../papers/index.md) 에서 각 카테고리로 이동.
 
@@ -30,7 +31,7 @@ Graph Representation Learning
 | 메시지 패싱 GNN(deep) | 이웃 집계로 표현 생성, 노드 특징 활용 | [GCN](../papers/foundations/gcn.md), [GraphSAGE](../papers/foundations/graphsage.md), [GAT](../papers/foundations/gat.md), [R-GCN](../papers/knowledge-graph/rgcn.md), [CompGCN](../papers/knowledge-graph/compgcn.md) |
 | 전이적(transductive) | 학습 그래프 노드만 예측 | DeepWalk, node2vec, GCN(원형) |
 | 귀납적(inductive) | 새 노드/그래프에 일반화 | [GraphSAGE](../papers/foundations/graphsage.md), [GAT](../papers/foundations/gat.md) |
-| 비지도/자기지도 | 라벨 없이 임베딩 학습 | DeepWalk, node2vec, GraphSAGE(비지도 손실) |
+| 비지도/자기지도 | 라벨 없이 임베딩 학습 | DeepWalk, node2vec, GraphSAGE(비지도 손실), [DGI](../papers/self-supervised/dgi.md), [GraphCL](../papers/self-supervised/graphcl.md) |
 
 ## 보조 축 2 — 그래프 구조
 
@@ -55,6 +56,8 @@ Graph Representation Learning
 | 합성(composition) | 노드·관계 결합 메시지 | [CompGCN](../papers/knowledge-graph/compgcn.md), [StarE](../papers/hypergraph/stare.md) |
 | 단사 집계(표현력) | sum+MLP로 1-WL 도달 | [GIN](../papers/foundations/gin.md) |
 | (준)전역 어텐션 | 구조 인코딩·국소+전역 하이브리드 | [Graphormer](../papers/graph-transformer/graphormer.md), [GraphGPS](../papers/graph-transformer/graphgps.md) |
+| GCN 단순화·전파 | 선형화·PageRank 전파 | [SGC](../papers/foundations/sgc.md), [APPNP](../papers/foundations/appnp.md) |
+| 자기지도·대조 | 상호정보 최대화·증강 대조 | [DGI](../papers/self-supervised/dgi.md), [GraphCL](../papers/self-supervised/graphcl.md) |
 
 ## 보조 축 4 — 다운스트림 과제
 
@@ -80,6 +83,11 @@ Graph Representation Learning
 | [StarE](../papers/hypergraph/stare.md) | 하이퍼관계 | GNN | 하이퍼관계 | 한정자 합성 메시지 |
 | [Graphormer](../papers/graph-transformer/graphormer.md) | 그래프 트랜스포머 | GNN·귀납 | 동질 | 구조 인코딩 어텐션 |
 | [GraphGPS](../papers/graph-transformer/graphgps.md) | 그래프 트랜스포머 | GNN·귀납 | 동질 | 국소+전역 하이브리드 |
+| [SGC](../papers/foundations/sgc.md) | 기초 | GNN·전이 | 동질 | 선형화(저역통과) |
+| [APPNP](../papers/foundations/appnp.md) | 기초 | GNN | 동질 | 예측/전파 분리·PageRank |
+| [HAN](../papers/heterogeneous/han.md) | 이종 | GNN | 이종 | 2단계 어텐션 |
+| [DGI](../papers/self-supervised/dgi.md) | 자기지도 | 자기지도·귀납 | 동질 | 상호정보 최대화 |
+| [GraphCL](../papers/self-supervised/graphcl.md) | 자기지도 | 자기지도 | 동질 | 증강 대조(InfoNCE) |
 
 ---
 [← 이전: 개요](overview.md) · [다음: 데이터셋 개요 →](datasets-overview.md)
