@@ -71,6 +71,11 @@ timestamp: 2026-06-19T00:00:00Z
 | **자기적대적 네거티브 샘플링** | 모델 점수 비례 가중 ([RotatE](../papers/knowledge-graph/rotate.md)) |
 | **관계 패턴** | 대칭/반대칭/역/합성 — KG 임베딩의 표현력 척도 |
 | **베이시스 분해 (Basis Decomp.)** | 관계 가중치를 공유 베이시스로 표현 ([R-GCN](../papers/knowledge-graph/rgcn.md)) |
+| **자기지도 (Self-Supervised)** | 라벨 없이 데이터 자체에서 학습 신호를 만들어 표현 학습 ([DGI](../papers/self-supervised/dgi.md), [GraphCL](../papers/self-supervised/graphcl.md)) |
+| **상호정보 최대화 (InfoMax)** | 노드(패치)와 전역 요약의 상호정보를 키워 표현 학습 ([DGI](../papers/self-supervised/dgi.md)) |
+| **대조학습 (Contrastive)** | 같은 것끼리 가깝게·다른 것끼리 멀게 (InfoNCE) ([GraphCL](../papers/self-supervised/graphcl.md)) |
+| **그래프 증강 (Augmentation)** | 노드 드롭·엣지 변형·속성 마스킹·서브그래프 등 뷰 생성 ([GraphCL](../papers/self-supervised/graphcl.md)) |
+| **오버스무딩 완화(전파 분리)** | 예측/전파 분리 + teleport로 깊이 강건 ([APPNP](../papers/foundations/appnp.md)) |
 
 ## 평가지표
 
